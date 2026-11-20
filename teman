@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kenangan Teman Sekolah</title>
+
+<style>
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg,#141e30,#243b55);
+  color: white;
+  text-align: center;
+}
+
+.container {
+  max-width: 450px;
+  margin: 50px auto;
+  padding: 25px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 20px;
+  box-shadow: 0 0 20px #0005;
+}
+
+h1 {
+  color: #ff9acb;
+}
+
+p {
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+button {
+  background: #ff69a6;
+  color: white;
+  border: none;
+  padding: 13px 25px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#pesan {
+  display: none;
+  color: #ffd6e8;
+  margin-top: 20px;
+}
+
+.heart {
+  font-size: 35px;
+  animation: gerak 1s infinite alternate;
+}
+
+@keyframes gerak {
+  from {transform: scale(1);}
+  to {transform: scale(1.3);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="heart">❤️</div>
+
+<h1>Untuk Teman-Temanku</h1>
+
+<h3>Terima Kasih Sudah Menjadi Bagian Cerita</h3>
+
+<p>
+Kita pernah tertawa bersama,
+bercanda tanpa alasan,
+berbagi cerita,
+dan melewati hari-hari yang penuh kenangan.
+</p>
+
+<button onclick="bukaPesan()">
+Buka Pesan ❤️
+</button>
+
+<div id="pesan">
+<h2>Jangan Lupakan Kita!</h2>
+
+<p>
+Suatu saat kita akan sibuk dengan
+jalan hidup masing-masing.
+
+Mungkin tidak ada lagi canda di kelas,
+tidak ada lagi cerita setiap hari.
+
+Tetapi ingatlah,
+kalian bukan sekadar teman sekolah,
+kalian adalah bagian dari perjalanan
+hidup yang tidak akan terlupakan.
+
+Tetap semangat mengejar cita-cita.
+Semoga sukses untuk kita semua!
+
+<strong>Salam kenangan, teman-teman! ❤️</strong>
+</p>
+</div>
+
+</div>
+
+<script>
+function bukaPesan() {
+  document.getElementById("pesan").style.display = "block";
+}
+</script>
+
+</body>
+</html>
