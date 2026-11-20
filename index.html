@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untuk Perempuan Spesial ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ff758c, #ffb6c1, #ffc3a0);
+    font-family: 'Georgia', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: white;
+}
+
+.card {
+    width: 90%;
+    max-width: 420px;
+    padding: 35px 25px;
+    text-align: center;
+    background: rgba(255,255,255,0.18);
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 25px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 40px rgba(120,0,40,0.2);
+    z-index: 2;
+    animation: muncul 1.5s ease;
+}
+
+@keyframes muncul {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.heart {
+    font-size: 65px;
+    animation: detak 1s infinite;
+}
+
+@keyframes detak {
+    50% { transform: scale(1.2); }
+}
+
+h1 {
+    font-size: 29px;
+    margin: 15px 0;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+button {
+    margin-top: 25px;
+    padding: 13px 25px;
+    border: none;
+    border-radius: 30px;
+    background: white;
+    color: #ff477e;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.08);
+    background: #ffe5ed;
+}
+
+#surat {
+    display: none;
+    margin-top: 25px;
+    padding: 18px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 15px;
+    animation: muncul 1s;
+}
+
+.floating {
+    position: absolute;
+    bottom: -30px;
+    font-size: 22px;
+    animation: terbang 7s linear infinite;
+    opacity: 0.8;
+}
+
+@keyframes terbang {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="heart">❤️</div>
+
+    <h1>untuk kamu, alya putri</h1>
+
+    <p>
+        Semangat kerjanya! Jangan menyerah hanya karena hari ini terasa berat. Ingat, setiap usaha yang kamu lakukan hari ini adalah bagian dari kesuksesanmu di masa depan😍😍😍
+      
+    </p>
+
+    <button onclick="bukaSurat()">
+        Buka Pesan Spesial 💌
+    </button>
+
+    <div id="surat">
+        <h2>hallo ❤️</h2>
+        <br>
+        <p>
+        Jadilah perempuan yang tidak mudah menyerah. Tidak semua hari akan berjalan indah, tetapi setiap hari selalu punya kesempatan untuk menjadi lebih baik🌹💐✨.
+        <br><br>
+        Jangan terlalu sibuk mengurus pekerjaan dan aktivitas sampai lupa menjaga kesehatan sendiri. Ingat, tubuhmu juga butuh istirahat. Jangan lupa makan, minum air putih, dan jaga kesehatan, ya🤗.
+        <br><br>
+        Jangan pernah lupa bahwa kamu
+        pantas mendapatkan kebahagiaan dan kesuksesan😍🌹💐
+        <br><br>
+        <b>semangattttt teruss yawww😍😍😍🫰🏻🫰🏻🫰🏻🫰🏻❤️
+        
+        from iam</b>
+        </p>
+    </div>
+
+</div>
+
+<script>
+function bukaSurat() {
+    document.getElementById("surat").style.display = "block";
+}
+
+function buatHati() {
+    const hati = document.createElement("div");
+    hati.className = "floating";
+    hati.innerHTML = ["❤️","💗","💕","💖","🌸"][
+        Math.floor(Math.random() * 5)
+    ];
+
+    hati.style.left = Math.random() * 100 + "vw";
+    hati.style.animationDuration =
+        (4 + Math.random() * 5) + "s";
+
+    document.body.appendChild(hati);
+
+    setTimeout(() => {
+        hati.remove();
+    }, 9000);
+}
+
+setInterval(buatHati, 400);
+</script>
+
+</body>
+</html>
